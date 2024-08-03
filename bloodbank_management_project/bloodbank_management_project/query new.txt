@@ -1,0 +1,24 @@
+CREATE TABLE `Receiver_Information`(
+sl_no BIGINT NOT NULL AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL,
+age int(100) NOT NULL,
+blood_group varchar(3) NOT NULL,
+bag_quantity int(99),
+phone_number VARCHAR(11) NOT NULL,
+address VARCHAR(50) NOT NULL,
+requirement_date varchar(30),
+PRIMARY KEY (sl_no)
+) AUTO_INCREMENT=0;
+
+CREATE TABLE `Donor_Information` (
+sl_no BIGINT NOT NULL AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL,
+age int(100) NOT NULL,
+blood_group varchar(3) NOT NULL,
+phone_number VARCHAR(11) NOT NULL,
+address VARCHAR(50) NOT NULL,
+last_donated varchar(30),
+FOREIGN key (sl_no)REFERENCES receiver_information (sl_no)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+)	
